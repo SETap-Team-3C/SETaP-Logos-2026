@@ -1,33 +1,46 @@
 import turtle
 t = turtle.Turtle()
 t.speed(0)
-
+t.hideturtle()
+screen = turtle.Screen()
+screen.bgcolor('white')
 colors = ['red', 'blue', 'green']
-
+positions = [(-40, 0), (0, 0), (40, 0)]
 for i in range(3):
+    t.penup()
+    t.goto(positions[i][0] + 5, positions[i][1] - 5)
+    t.pendown()
+    t.color('gray')
+    t.pensize(8)
+    t.circle(30)
+    
+for i in range(3):
+    t.penup()
+    t.goto(positions[i])
+    t.pendown()
     t.color(colors[i])
-    t.pensize(3)
-    t.circle(50)
-    t.right(120)
-
+    t.pensize(8)
+    t.circle(30)
 t.penup()
-t.goto(-35, 60) 
+t.goto(5, 10)
 t.pendown()
-t.color('blue')
-t.pensize(3)
+t.color('gray')
+t.pensize(6)
 t.begin_fill()
-for _ in range(4):
-    t.forward(70)
-    t.right(90)
+t.goto(20, -5)
+t.goto(5, -20)
+t.goto(-10, -5)
+t.goto(5, 10)
 t.end_fill()
-
 t.penup()
-t.goto(0, -25)
+t.goto(0, 15)
 t.pendown()
 t.color('orange')
+t.pensize(6)
 t.begin_fill()
-t.circle(25)
+t.goto(15, 0)
+t.goto(0, -15)
+t.goto(-15, 0)
+t.goto(0, 15)
 t.end_fill()
-
-t.hideturtle()
 turtle.done()
