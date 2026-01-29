@@ -8,45 +8,51 @@ y = 50
 #creating the letter Y
 t.pensize(5)
 
-t.penup()
-t.goto(x, y)
-t.pendown()
+def draw_y_coordinates(x,y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
 
-#t.left(135)
-x = x-height/2
-y = y+height/2
-t.goto(x, y)
+    #first diagonal line going NW
+    x = x-height/2
+    y = y+height/2
+    t.goto(x, y)
 
-x -= 30
-t.goto(x,y)
+    #second diagonal going W of new X,Y
+    x -= 30
+    t.goto(x,y)
 
-x +=height/2 + 15
-y -= height/2 + 15
-t.goto(x,y)
+    #diagonal line SE near center
+    x +=height/2 + 15
+    y -= height/2 + 15
+    t.goto(x,y)
 
-y -= height - 30
-t.goto(x,y)
+    y -= height - 15
+    t.goto(x,y)
 
-x += 30
-t.goto(x,y)
+    x += 30
+    t.goto(x,y)
 
-y =+ height/2 - 15
-t.goto(x,y)
+    y =+ height/2 - 15
+    t.goto(x,y)
 
-x += height/2 + 15
-y += height/2 + 15
-t.goto(x,y)
+    x += height/2 + 15
+    y += height/2 + 15
+    t.goto(x,y)
 
-x -= 30
-t.goto(x,y)
+    x -= 30
+    t.goto(x,y)
 
-x -= height/2
-y -= height/2 
-t.goto(x,y)
+    x -= height/2
+    y -= height/2 
+    t.goto(x,y)
 
-t.penup()
-t.goto(0,0)    
+    t.penup()
+    t.goto(0,0)    
 
+
+
+draw_y_coordinates(x,y)
 
 
 turtle.done()
