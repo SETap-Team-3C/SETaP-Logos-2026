@@ -1,6 +1,6 @@
 import turtle
 t = turtle.Turtle()
-def draw_t(startcoords):
+def drawT(startcoords):
     t.penup()
     t.goto(startcoords)
     t.setheading(0)
